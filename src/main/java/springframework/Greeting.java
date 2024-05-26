@@ -8,6 +8,7 @@ public class Greeting {
     private static final String HELLO = "Hello";
     private static final String WORLD = "World";
 
+    int i =0;
     public String helloWorld(){
         return HELLO + " " + WORLD;
     }
