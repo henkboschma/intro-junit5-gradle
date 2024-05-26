@@ -12,5 +12,19 @@ repositories {
 }
 
 dependencies {
+    // JUnit 5 API and Engine
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
 
+    // Optional: JUnit Vintage Engine for running JUnit 3 and 4 tests
+    testRuntimeOnly 'org.junit.vintage:junit-vintage-engine:5.8.1'
+
+}
+
+test {
+    useJUnitPlatform()
+    testLogging {
+        events "passed", "skipped", "failed"
+        showStandardStreams = true
+    }
 }
